@@ -92,7 +92,7 @@ extension FlexAnimation {
     //  MARK: Static
     
     @discardableResult
-    static func animate(
+    public static func animate(
         after delay: TimeUnit? = nil,
         for duration: TimeUnit? = nil,
         using function: Function? = nil,
@@ -112,7 +112,7 @@ extension FlexAnimation {
         )
     }
     
-    static func animate(
+    public static func animate(
         after delay: TimeUnit? = nil,
         for duration: TimeUnit? = nil,
         using function: Function? = nil,
@@ -175,7 +175,7 @@ extension FlexAnimation.Context {
     //    MARK: - Derive animations from explicit context
     
     @discardableResult
-    func animate(
+    public func animate(
         after delay: FlexAnimation.TimeUnit? = nil,
         for duration: FlexAnimation.TimeUnit? = nil,
         using function: FlexAnimation.Function? = nil,
@@ -201,7 +201,7 @@ extension FlexAnimation.Context {
         )
     }
     
-    func animate(
+    public func animate(
         after delay: FlexAnimation.TimeUnit? = nil,
         for duration: FlexAnimation.TimeUnit? = nil,
         using function: FlexAnimation.Function? = nil,
