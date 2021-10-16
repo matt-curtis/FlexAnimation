@@ -17,7 +17,7 @@ public enum FlexAnimation {
     
     //  MARK: - Type aliases
     
-    typealias FilterClosure = (SaferLayerWrapperForComparison) -> Bool
+    public typealias FilterClosure = (SaferLayerWrapperForComparison) -> Bool
     
     
     //  MARK: - Static properties
