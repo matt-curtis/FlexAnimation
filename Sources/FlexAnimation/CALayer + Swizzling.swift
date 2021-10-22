@@ -25,7 +25,8 @@ extension CALayer {
         method_exchangeImplementations(originalMethod, swizzledMethod)
     }
     
-    @objc func swizzled_action(forKey key: String) -> CAAction? {
+    @objc(_FlexAnimation_swizzled_actionForKey:)
+    func swizzled_action(forKey key: String) -> CAAction? {
         switch key {
             //  Try to exclude non-properties (actions/events) from animation.
             
