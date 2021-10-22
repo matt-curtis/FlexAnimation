@@ -2,7 +2,11 @@ import QuartzCore
 
 extension FlexAnimation {
     
-    class Action: CAAction {
+    /// A `CAAction` subclass that, when run on a given `CALayer`'s property,
+    /// adds an animation to that layer for that property based on the an animation `Context`.
+    /// Intended use as a return value of `CALayer`'s `action(forKey:)` method.
+    
+    public class Action: CAAction {
         
         //  MARK: - Properties
         
@@ -13,7 +17,7 @@ extension FlexAnimation {
         
         //  MARK: - Init
         
-        init(oldValue: Any?, context: Context) {
+        public init(oldValue: Any?, context: Context) {
             self.oldValue = oldValue
             self.context = context
         }
@@ -21,7 +25,7 @@ extension FlexAnimation {
         
         //  MARK: - Methods
         
-        func run(forKey event: String, object anObject: Any, arguments dict: [AnyHashable : Any]?) {
+        public func run(forKey event: String, object anObject: Any, arguments dict: [AnyHashable : Any]?) {
             guard let layer = anObject as? CALayer else { return }
             
             let modelValue = layer.value(forKey: event)
